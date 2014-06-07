@@ -8,11 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class CalculadoraActivity extends Activity {
-
-
+public class CalculadoraActivity extends Activity 
+{
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) 
+	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		final EditText v1 = (EditText) findViewById(R.id.edtValor1);
@@ -25,60 +25,57 @@ public class CalculadoraActivity extends Activity {
 		Button multiplicar = (Button) findViewById(R.id.btnMultiplicar);
 	
 		//Somar
-		somar.setOnClickListener(new OnClickListener() {
-			
+		somar.setOnClickListener(new OnClickListener() 
+		{
 			@Override
-			public void onClick(View v) {
-				
+			public void onClick(View v) 
+			{		
 				Double valor1 = Double.parseDouble(v1.getText().toString());
 				Double valor2 = Double.parseDouble(v2.getText().toString());
 				Double r = valor1 + valor2;
 				resultado.setText(String.valueOf(r));
-				
 			}
 		});
+		
 		//Subtrair
-	     subtrair.setOnClickListener(new OnClickListener() {
-	    	 
+	     subtrair.setOnClickListener(new OnClickListener() 
+		{
 	    	 @Override
-	    	 public void onClick(View v) {
-	    		 
+	    	 public void onClick(View v) 
+			{
 	    		 Double valor1 = Double.parseDouble(v1.getText().toString());
 	    		 Double valor2 = Double.parseDouble(v2.getText().toString());
 	    		 Double r = valor1 - valor2;
 	    		 resultado.setText(String.valueOf(r));
-	    		 
-	    	 }
+	    	}
 	     });
 	     
 	     //Dividir
-	     dividir.setOnClickListener(new View.OnClickListener() {
+	     dividir.setOnClickListener(new View.OnClickListener() 
+		{
 
 	    	 	@Override
-	  			public void onClick(View v) {
-	    	 		
+	  			public void onClick(View v) 
+				{
 	  				Double valor1 =  Double.parseDouble(v1.getText().toString());
 	  				Double valor2 =  Double.parseDouble(v2.getText().toString());	
 	  				Double r = valor1/valor2;
 	  				resultado.setText(String.valueOf(r));
-			}
+			    }
 		});
 	     
 	   //Multiplicar
-	   multiplicar.setOnClickListener(new OnClickListener() {
+	   multiplicar.setOnClickListener(new OnClickListener() 
+	   {
 		   
 		   @Override
-		   public void onClick(View v) {
-
-
-			   
+		   public void onClick(View v) 
+		   {
 			   Double valor1 = Double.parseDouble(v1.getText().toString());
 			   Double valor2 = Double.parseDouble(v2.getText().toString());
 			   Double r = valor1 * valor2;
 			   resultado.setText(String.valueOf(r));
-			   
 		   }
 	   });
-	
 	}
 }
